@@ -1,15 +1,15 @@
-export const triviaQs = [
+export const triviaCards = [
     {
         question: "what is Harry Potter's astrological sign?",
         answer: "Leo",
-        answerShown: "false",
-        difficulty: "easy"
+        answerShown: false,
+        difficulty: "hard"
     },
     {
         question:"What is Dumbledore's little sister's name?",
         answer:"Ariana",
         answerShown: false,
-        difficulty: "easy"
+        difficulty: "medium"
     },
     {
         question:"Who was SUPPOSED to murder Dumbledore?",
