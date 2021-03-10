@@ -30,7 +30,7 @@ export default {
 button {
   background-color: goldenrod;
   border: none;
-  color: black;
+  color: white;
   padding: 15px 20px;
   text-align: center;
   text-decoration: none;

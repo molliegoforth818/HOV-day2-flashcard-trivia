@@ -1,26 +1,26 @@
 <template>
-    <div>
+  <div>
     <button
       :class="{ active: difficulty === 'easy' }"
-      @click="chooseDifficulty('easy')"
+      @click="selectDifficulty('easy')"
     >
       Easy
     </button>
     <button
       :class="{ active: difficulty === 'medium' }"
-      @click="chooseDifficulty('medium')"
+      @click="selectDifficulty('medium')"
     >
       Medium
     </button>
     <button
       :class="{ active: difficulty === 'hard' }"
-      @click="chooseDifficulty('hard')"
+      @click="selectDifficulty('hard')"
     >
       Hard
     </button>
     <button
       :class="{ active: difficulty === 'all' }"
-      @click="chooseDifficulty('all')"
+      @click="selectDifficulty('all')"
     >
       Show All
     </button>
@@ -29,16 +29,16 @@
 
 <script>
 export default {
-props: ["difficulty"],
-methods: {
-    chooseDifficulty(difficulty){
-        this.$emit("difficulty-change", difficulty);
+  props: ["difficulty"],
+  methods: {
+    selectDifficulty(difficulty) {
+      this.$emit("difficulty-change", difficulty);
     }
-}
+  }
 };
 </script>
 
-<style>
+<style scoped>
 button {
   border: 5px solid black;
   color: goldenrod;

@@ -4,11 +4,11 @@
     <button @click="hideAll" class="hide-button"> Hide All </button>
     <div class="difficulty-levels">
       <difficulty-levels
-      :difficulty="chooseDifficulty"
+      :difficulty="selectedDifficulty"
       @difficulty-change="handleDifficultyChange" />
     </div>
-    <div class="flash-cards">
-    <div v-for="card in cards" :key="card.id">
+    <div class="questions">
+    <div v-for="card in flashCards" :key="card.id">
       <flash-card :card="card" @status-change="handleStatusChange" /> 
     </div>
     </div>
@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       cards: [...triviaCards],
-      chosenDifficulty: "all"
+      selectedDifficulty: "all"
     };
   },
   methods: {
@@ -33,7 +33,7 @@ export default {
       card.answerShown = !card.answerShown;
     },
     handleDifficultyChange(difficulty) {
-      this.chosenDifficulty = difficulty;
+      this.selectedDifficulty = difficulty;
     },
     hideAll() {
       this.cards.forEach(cards => (cards.answerShown = false));
@@ -41,23 +41,23 @@ export default {
   },
   computed: {
     flashCards() {
-      if (this.chosenDifficulty === "all"){
+      if (this.selectedDifficulty === "all"){
         return this.cards;
       }
-      return this.cards.filter(cards => cards.difficulty ===this.chosenDifficulty);
+      return this.cards.filter(cards => cards.difficulty ===this.selectedDifficulty);
     }
   }
 };
 </script>
 
 <style scoped>
-.flash-cards {
+.questions {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
 }
-.hide-button{
+.hide-button {
   background: transparent;
   border: none;
   cursor: pointer;
@@ -65,5 +65,4 @@ export default {
   font-size: 20px;
   color: goldenrod;
 }
-
 </style>
