@@ -1,25 +1,17 @@
 # hp-flashcard-trivia
 
-## Project setup
+## Project Learning Goals
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+- Use multiple components
+- Render lists using v-for
+- Pass data to child components via props
+- $emit custom events to parent components
+- Use class binding to conditionally add CSS to an HTML element
+- Define computed properties on a component
 ```
 
-### Lints and fixes files
+### Follow this link to checkout it out!
 ```
-npm run lint
+https://hov-hp-trivia.web.app
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 # HOV-day2-flashcard-trivia
